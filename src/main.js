@@ -8,7 +8,7 @@ import Mock from 'mockjs'
 import 'mint-ui/lib/style.min.css'
 Vue.config.productionTip = false
 
-Vue.use(Mint, Mock)
+Vue.use(Mint, Mock, router)
 
 /* eslint-disable no-new */
 new Vue({
