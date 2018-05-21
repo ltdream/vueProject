@@ -22,3 +22,4 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 # 项目的ui框架是mint-ui
 # 用mock.js模拟数据
+# 使用scss需要先安装相关依赖   cnpm i node-sass sass-loader vue-style-loader --save
