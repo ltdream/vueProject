@@ -4,11 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import Mint from 'mint-ui'
 import router from './router'
+import Vuex from 'vuex'
 import Mock from 'mockjs'
 import 'mint-ui/lib/style.min.css'
 Vue.config.productionTip = false
 
-Vue.use(Mint, Mock, router)
+Vue.use(Mint, Mock, router, Vuex)
 
 /* eslint-disable no-new */
 new Vue({
