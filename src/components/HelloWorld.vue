@@ -1,40 +1,53 @@
 <template>
   <div class="hello">
-    <mt-index-list>
-      <mt-index-section index="A">
-        <mt-cell title="Aaron"></mt-cell>
-        <mt-cell title="Alden"></mt-cell>
-        <mt-cell title="Austin"></mt-cell>
-      </mt-index-section>
-      <mt-index-section index="B">
-        <mt-cell title="Baldwin"></mt-cell>
-        <mt-cell title="Braden"></mt-cell>
-      </mt-index-section>
-      ...
-      <mt-index-section index="Z">
-        <mt-cell title="Zack"></mt-cell>
-        <mt-cell title="Zane"></mt-cell>
-      </mt-index-section>
-    </mt-index-list>
+    <div class="swiper-container" id="swipers">
+			<div class="swiper-wrapper">
+				<div v-for="(item,index) in swiperList" :key="index" class="swiper-slide">
+					<div class="swiper-img" :style="{backgroundImage:'url('+item.img+')'}"></div>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
   </div>
 </template>
 
 <script>
-import { IndexList, IndexSection, Cell } from 'mint-ui'
+import Swiper from 'swiper';
 export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      swiperList:{
+				0:{
+					'img': 'http://dummyimage.com/125x125/ffcc33'
+				},
+				1:{
+					'img': 'http://dummyimage.com/125x125/fff003'
+				}
+			},
     }
   },
   components: {
-    IndexList, IndexSection, Cell
+  },
+  methods: {
+    swiperinit () {
+      var swipers = document.getElementById("swipers");
+			var mySwiper1 = new Swiper(swipers, {
+				loop: true,
+				autoplay: 3000
+			})
+		}
   }
 }
 </script>
+<style style="scss">
+@import "../../node_modules/swiper/src/swiper.less"
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
+.swiper-container{
+	width:300px;height:125px;overflow: hidden;
+}
+.swiper-wrapper,.swiper-slide,.swiper-img{
+	height:125px;
+}
 </style>
