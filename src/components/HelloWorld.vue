@@ -13,7 +13,7 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
-      value:'',
+      value:[],
       options:[{
         label: 'disabled option',
         value: 'valueF',

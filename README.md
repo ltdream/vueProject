@@ -20,6 +20,9 @@ npm run build --report
 # 项目的ui框架是mint-ui
 # 用mock.js模拟数据
 # 使用scss需要先安装相关依赖   cnpm i node-sass sass-loader vue-style-loader --save
+#状态管理工具vuex
+#加快打包happypack   cnpm i --save-dev happypack
+
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
